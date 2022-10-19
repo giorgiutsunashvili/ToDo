@@ -1,0 +1,18 @@
+<div cdkDropListGroup class="calendar">
+    <div *ngFor="let weekDay of week.allWeekDays" class="example-container">
+        <h2>{{weekDay.title}}</h2>
+        <div cdkDropList [cdkDropListData]="weekDay" class="example-list" (cdkDropListDropped)="drop($event)">
+            <div 
+            (click)="openDialog(task)"
+            class="example-box" *ngFor="let task of weekDay.tasks" cdkDrag>
+                <app-calendar-card 
+                *ngIf="task.title.length != 0;else elseBlock"
+                [dayTaskItem]="task"
+                ></app-calendar-card>
+                <ng-template #elseBlock>
+                    <p>{{task.hoursFrom}} - {{task.hoursTo}}</p>
+                </ng-template>
+            </div>
+        </div>
+    </div>
+</div>

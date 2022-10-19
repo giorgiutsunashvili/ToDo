@@ -1,0 +1,32 @@
+.card-body {
+    padding:0px;
+}
+
+*{
+    color: white!important;
+}
+
+.card {
+    background: rgb(87 87 87 / 22%);
+    border:1px solid #fff
+}
+
+.card-body h5 {
+    margin:0px;
+    font-size: 17px;
+}
+
+.list-group-item {
+    padding: 5px 15px;
+    background-color: transparent;
+    border-color: white;
+}
+
+select {
+    background-color: transparent!important;
+}
+
+select option {
+    background-color: rgb(0,0,0)!important;
+}
+
